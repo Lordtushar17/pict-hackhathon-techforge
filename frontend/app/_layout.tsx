@@ -10,11 +10,14 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import { registerForPushNotificationsAsync } from "@/components/utils/notifications";
 
 import { useColorScheme } from "@/components/useColorScheme";
 
 // Keep splash visible while we load fonts
 SplashScreen.preventAutoHideAsync();
+
+
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
@@ -25,6 +28,10 @@ export default function RootLayout() {
   useEffect(() => {
     if (error) throw error;
   }, [error]);
+
+  useEffect(() => {
+    registerForPushNotificationsAsync();
+  }, []);
 
   useEffect(() => {
     if (loaded) {
