@@ -11,6 +11,9 @@ import SensorCard from "../../components/SensorCard";
 import AlertBanner from "../../components/AlertBanner";
 import QuickActionsBar from "../../components/QuickActionsBar";
 
+import { Tabs } from 'expo-router';
+
+
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safe}>

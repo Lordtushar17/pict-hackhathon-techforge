@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter,  type Href } from 'expo-router';
 import RoleTabs from '@/components/auth/RoleTabs';
 import ParentLoginForm from '@/components/auth/ParentLoginForm';
 import HospitalLoginForm from '@/components/auth/HospitalLoginForm';
@@ -16,7 +16,7 @@ export default function LoginScreen() {
   };
 
   const handleHospitalLogin = () => {
-    router.replace('/(tabs)');
+    router.replace('/doctor' as Href);
   };
 
   return (

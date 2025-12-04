@@ -17,8 +17,6 @@ import { useColorScheme } from "@/components/useColorScheme";
 // Keep splash visible while we load fonts
 SplashScreen.preventAutoHideAsync();
 
-
-
 export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
@@ -55,10 +53,13 @@ function RootLayoutNav() {
         {/* Login first */}
         <Stack.Screen name="login" />
 
-        {/* Tab group */}
+        {/* Parent tab group (folder: app/(tabs)) */}
         <Stack.Screen name="(tabs)" />
 
-        {/* Modal (if you use it) */}
+        {/* Doctor stack (folder: app/doctor) */}
+        <Stack.Screen name="doctor" />
+
+        {/* Modal */}
         <Stack.Screen
           name="modal"
           options={{ presentation: "modal" }}
