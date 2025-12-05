@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
-import { sendTestNotification } from "../../components/utils/notifications"; // adjust path as needed
+// import { sendTestNotification } from "../../components/utils/notifications"; // adjust path as needed
 
 export default function ProfileScreen() {
-  const handleSendNotification = () => {
-    sendTestNotification();
-  };
+  // const handleSendNotification = () => {
+  //   sendTestNotification();
+  // };
 
   return (
     <View style={styles.container}>
@@ -12,9 +12,9 @@ export default function ProfileScreen() {
       <Text style={styles.sub}>Age: 2 months</Text>
       <Text style={styles.sub}>Weight: 4.8 kg</Text>
 
-      <Pressable style={styles.button} onPress={handleSendNotification}>
+      {/* <Pressable style={styles.button} onPress={handleSendNotification}>
         <Text style={styles.buttonText}>Send Test Notification</Text>
-      </Pressable>
+      </Pressable> */}
     </View>
   );
 }

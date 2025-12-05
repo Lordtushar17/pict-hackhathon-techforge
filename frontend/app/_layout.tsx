@@ -10,7 +10,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
-import { registerForPushNotificationsAsync } from "@/components/utils/notifications";
+// import { registerForPushNotificationsAsync } from "@/components/utils/notifications";
 
 import { useColorScheme } from "@/components/useColorScheme";
 
@@ -27,9 +27,9 @@ export default function RootLayout() {
     if (error) throw error;
   }, [error]);
 
-  useEffect(() => {
-    registerForPushNotificationsAsync();
-  }, []);
+  // useEffect(() => {
+  //   registerForPushNotificationsAsync();
+  // }, []);
 
   useEffect(() => {
     if (loaded) {

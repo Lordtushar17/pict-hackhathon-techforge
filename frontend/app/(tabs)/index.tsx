@@ -4,8 +4,9 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  SafeAreaView,
+
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import SectionHeader from "../../components/SectionHeader";
 import SensorCard from "../../components/SensorCard";
 import AlertBanner from "../../components/AlertBanner";
